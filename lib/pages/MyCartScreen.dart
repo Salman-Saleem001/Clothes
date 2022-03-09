@@ -45,6 +45,7 @@ class MyCartScreen extends StatelessWidget {
                 label: 'Go to Checkout',
                 preIcon: Icons.logout_rounded,
                 price: 138.31,
+                route: 'CreditCardScreen',
               )
             ],
           ),

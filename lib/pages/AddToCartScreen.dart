@@ -203,6 +203,7 @@ class _AddToCartScreenState extends State<AddToCartScreen> {
                   FavoriteBottomButton(
                     label: 'Add To Cart',
                     preIcon: Icons.shopping_bag_outlined,
+                    route: '/CreditCardScreen',
                   )
                 ],
               ),

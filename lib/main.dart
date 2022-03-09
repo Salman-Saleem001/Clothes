@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pearlclothes/pages/AddToCartScreen.dart';
+import 'package:pearlclothes/pages/CreditCardScreen.dart';
 import 'package:pearlclothes/pages/EntryScreen.dart';
+import 'package:pearlclothes/pages/ErrorScreen.dart';
 import 'package:pearlclothes/pages/FavoriteScreen.dart';
 import 'package:pearlclothes/pages/FindProductScreen.dart';
 import 'package:pearlclothes/pages/FinishScreen.dart';
@@ -32,6 +34,8 @@ void main() {
         '/FindProductScreen': (context) => FindProductScreen(),
         '/MyCartCard': (context) => MyCartScreen(),
         '/FinishScreen': (context) => FinishScreen(),
+        '/CreditCardScreen': (context) => CreditCardScreen(),
+        '/ErrorScreen': (context) => ErrorScreen(),
       },
     ),
   );

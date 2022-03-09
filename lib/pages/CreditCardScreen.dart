@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pearlclothes/style/ButtonStyle.dart';
 import 'package:pearlclothes/style/TextFieldLabelStyle.dart';
 import 'package:pearlclothes/style/TextFormFieldStyle.dart';
 import 'package:pearlclothes/style/VisaCardLogo.dart';
 import 'package:pearlclothes/style/color.dart';
 import 'package:pearlclothes/style/getContainerDecoration.dart';
+import 'package:pearlclothes/widgets/ButtonText.dart';
 import 'package:pearlclothes/widgets/CartHeadWidget.dart';
 import 'package:pearlclothes/widgets/ExpiryAndCvcTextField.dart';
 
@@ -150,6 +152,24 @@ class CreditCardScreen extends StatelessWidget {
                   height: 24,
                 ),
                 ExpiryAndCvcTextField(),
+                SizedBox(
+                  height: 43,
+                ),
+                SizedBox(
+                  height: 56,
+                  width: double.infinity,
+                  child: FlatButton(
+                    color: Color(ColorX.primary),
+                    shape: getRoundedRectangleBorder(),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/FinishScreen');
+                    },
+                    child: ButtonText(
+                      label: 'Use This Card',
+                      color: ColorX.white,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

@@ -7,16 +7,17 @@ import 'ButtonText.dart';
 
 class FavoriteBottomButton extends StatelessWidget {
   IconData? preIcon;
-  String label;
+  String label, route;
   double? price;
   int? backGroundColor;
-  FavoriteBottomButton(
-      {Key? key,
-      required this.label,
-      this.preIcon,
-      this.price,
-      this.backGroundColor = 0xffFFFFFF})
-      : super(key: key);
+  FavoriteBottomButton({
+    Key? key,
+    required this.label,
+    this.preIcon,
+    this.price,
+    required this.route,
+    this.backGroundColor = 0xffFFFFFF,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,9 @@ class FavoriteBottomButton extends StatelessWidget {
         child: FlatButton(
           color: Color(ColorX.primary),
           shape: getRoundedRectangleBorder(),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, route);
+          },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

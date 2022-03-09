@@ -126,7 +126,7 @@ class EntryScreen extends StatelessWidget {
                       color: Color(ColorX.primary),
                       shape: getRoundedRectangleBorder(),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/HomeScreen');
+                        Navigator.pushNamed(context, '/SignUpScreen');
                       },
                       child: ButtonText(
                         label: 'REGISTER',

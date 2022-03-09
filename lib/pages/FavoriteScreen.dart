@@ -66,6 +66,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
               FavoriteBottomButton(
                 label: 'Go to Checkout',
                 preIcon: Icons.shopping_bag_outlined,
+                route: '/CreditCardScreen',
               ),
             ],
           ),
@@ -144,6 +145,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                       label: 'Place Order',
                       preIcon: Icons.directions_car,
                       backGroundColor: ColorX.transparent,
+                      route: '/CreditCardScreen',
                     )
                   ],
                 ),
