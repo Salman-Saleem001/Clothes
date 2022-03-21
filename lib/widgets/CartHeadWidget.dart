@@ -19,15 +19,15 @@ class CartHeadWidget extends StatelessWidget {
             color: Color(ColorX.black),
           ),
         ),
-        Expanded(child: SizedBox()),
-        Container(
-          margin: EdgeInsets.only(right: 170),
-          child: Text(
-            lable!,
-            style: TextStyle(
-                fontWeight: FontWeight.w900,
-                fontSize: 16,
-                color: Color(color!)),
+        Expanded(
+          child: Center(
+            child: Text(
+              lable!,
+              style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 16,
+                  color: Color(color!)),
+            ),
           ),
         ),
       ],

@@ -23,17 +23,15 @@ class SignUpScreen extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 45),
+              padding: EdgeInsets.only(left: 47, right: 30),
               height: MediaQuery.of(context).size.height / 2.3,
               width: double.infinity,
               decoration: getGradientBoxDecoration(),
               child: LoginGradientData(
                 childx: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    SizedBox(
-                      height: 70,
-                    ),
                     GestureDetector(
                       onTap: () {
                         Navigator.pop(context);
@@ -43,36 +41,35 @@ class SignUpScreen extends StatelessWidget {
                         color: Color(ColorX.white),
                       ),
                     ),
-                    SizedBox(
-                      height: 82,
-                    ),
-                    ScreenHeading(
-                      text: heading,
-                      colorx: ColorX.white,
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Row(
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        DiscriptionText(
-                          discription: discription,
+                        ScreenHeading(
+                          text: heading,
                           colorx: ColorX.white,
                         ),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.pushNamed(context, '/LoginScreen');
-                          },
-                          child: DiscriptionText(
-                            discription: 'Login',
-                            colorx: ColorX.white,
-                            textDecoration: TextDecoration.underline,
-                          ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Row(
+                          children: [
+                            DiscriptionText(
+                              discription: discription,
+                              colorx: ColorX.white,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.pushNamed(context, '/LoginScreen');
+                              },
+                              child: DiscriptionText(
+                                discription: 'Login',
+                                colorx: ColorX.white,
+                                textDecoration: TextDecoration.underline,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height / 7,
                     ),
                     Text(
                       'REGISTER',
@@ -89,7 +86,6 @@ class SignUpScreen extends StatelessWidget {
             Expanded(
               child: SingleChildScrollView(
                 child: Container(
-                  height: MediaQuery.of(context).size.height / 1.5,
                   color: Color(ColorX.white),
                   padding: EdgeInsets.symmetric(horizontal: 45),
                   child: Column(
@@ -110,7 +106,7 @@ class SignUpScreen extends StatelessWidget {
                         keyboardType: TextInputType.text,
                         decoration: getOutlineBorderDecoration(
                           hintText: 'Enter Your Email',
-                          prefixicon: Icons.perm_identity,
+                          prefixicon: Icons.person_outline,
                         ),
                       ),
                       SizedBox(
@@ -181,6 +177,9 @@ class SignUpScreen extends StatelessWidget {
                             color: Color(ColorX.grey),
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        height: 48,
                       ),
                     ],
                   ),

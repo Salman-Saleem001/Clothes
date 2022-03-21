@@ -15,7 +15,11 @@ class MyCartScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Color(ColorX.black),
         body: Container(
-          padding: EdgeInsets.only(left: 30, top: 78, right: 30, bottom: 41),
+          padding: EdgeInsets.only(
+              left: 30,
+              top: MediaQuery.of(context).size.height / 20,
+              right: 30,
+              bottom: 41),
           decoration: getContainerDecoration(),
           child: Column(
             children: [

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "160563054364",
+    "project_id": "pearl-cloth",
+    "storage_bucket": "pearl-cloth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160563054364:android:570adda99a0e51cfca9cd9",
+        "android_client_info": {
+          "package_name": "com.example.pearlclothes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160563054364-hc17tve6h5k44md49hhkv01usl1b5gnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcJULK07_YCOBoEHplp1usdCVv2htSoew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160563054364-hc17tve6h5k44md49hhkv01usl1b5gnd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -28,11 +28,15 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Color(ColorX.black),
         body: Container(
-          padding: EdgeInsets.only(left: 30, top: 68, right: 30, bottom: 41),
+          padding: EdgeInsets.only(
+              left: 30,
+              top: MediaQuery.of(context).size.height / 18,
+              right: 30,
+              bottom: 41),
           decoration: getContainerDecoration(),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CartHeadWidget(
                 lable: 'Favorite',

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pearlclothes/style/color.dart';
 import 'package:pearlclothes/widgets/RichTextWidget.dart';
@@ -16,7 +15,7 @@ class PopularItems extends StatefulWidget {
 
 class _PopularItemsState extends State<PopularItems> {
   bool check = false;
-  Icon Outlinedicon = Icon(
+  Icon outlinedicon = Icon(
     Icons.favorite_outline,
     color: Color(ColorX.black),
   );
@@ -56,7 +55,7 @@ class _PopularItemsState extends State<PopularItems> {
                                 }
                               });
                             },
-                            icon: check ? newIcon : Outlinedicon,
+                            icon: check ? newIcon : outlinedicon,
                           ),
                         ),
                       ],
@@ -87,7 +86,7 @@ class _PopularItemsState extends State<PopularItems> {
             RichTextWidget(
               amount: widget.amount,
               color: ColorX.tagColor,
-            )
+            ),
           ],
         ),
       ),

@@ -9,13 +9,14 @@ class LoginGradientData extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned(
-          top: 51.7,
-          left: 183,
-          child: Image.asset(
-            'asset/image/loginImage.png',
-            fit: BoxFit.cover,
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Image.asset(
+              'asset/image/loginImage.png',
+              fit: BoxFit.contain,
+            ),
+          ],
         ),
         childx,
       ],

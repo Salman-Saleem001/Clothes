@@ -30,65 +30,58 @@ class FavoriteCard extends StatelessWidget {
             image,
             fit: BoxFit.contain,
           ),
-          SizedBox(
-            width: 13,
-          ),
-          Container(
-            padding: EdgeInsets.only(top: 18),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  label,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w900,
-                      color: Color(ColorX.primary)),
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  brand,
-                  style: TextStyle(
-                      color: Color(ColorX.tagColor),
-                      fontWeight: FontWeight.w700,
-                      fontSize: 9),
-                ),
-              ],
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.only(top: 18, left: 13),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    label,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        color: Color(ColorX.primary)),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    brand,
+                    style: TextStyle(
+                        color: Color(ColorX.tagColor),
+                        fontWeight: FontWeight.w700,
+                        fontSize: 9),
+                  ),
+                ],
+              ),
             ),
           ),
-          SizedBox(
-            width: 48,
-          ),
-          Expanded(child: SizedBox()),
-          Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                SizedBox(
-                  height: 46,
-                  width: 80,
-                  child: Center(
-                    child: RichTextWidget(
-                      color: ColorX.black,
-                      amount: 28,
-                    ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              SizedBox(
+                height: 46,
+                width: 80,
+                child: Center(
+                  child: RichTextWidget(
+                    color: ColorX.black,
+                    amount: 28,
                   ),
                 ),
-                SizedBox(
-                  height: 32,
+              ),
+              SizedBox(
+                height: 32,
+              ),
+              GestureDetector(
+                onTap: () => Navigator.pushNamed(context, '/AddToCartScreen'),
+                child: Icon(
+                  Icons.arrow_forward,
+                  color: Color(ColorX.tagColor),
+                  size: 20,
                 ),
-                GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, '/AddToCartScreen'),
-                  child: Icon(
-                    Icons.arrow_forward,
-                    color: Color(ColorX.tagColor),
-                    size: 20,
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),

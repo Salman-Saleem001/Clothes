@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:pearlclothes/style/ButtonStyle.dart';
 import 'package:pearlclothes/style/LoginGradient.dart';
 import 'package:pearlclothes/style/TextFieldLabelStyle.dart';
@@ -39,10 +38,8 @@ class _LoginScreenState extends State<LoginScreen> {
               child: LoginGradientData(
                 childx: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(
-                      height: 70,
-                    ),
                     GestureDetector(
                       onTap: () {
                         Navigator.pushNamed(context, '/EntryScreen');
@@ -52,22 +49,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Color(ColorX.white),
                       ),
                     ),
-                    SizedBox(
-                      height: 82,
-                    ),
                     ScreenHeading(
                       text: heading,
                       colorx: ColorX.white,
                     ),
-                    SizedBox(
-                      height: 30,
-                    ),
                     DiscriptionText(
                       discription: discription,
                       colorx: ColorX.white,
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height / 11,
                     ),
                     Text(
                       'LOGIN',
@@ -84,57 +72,64 @@ class _LoginScreenState extends State<LoginScreen> {
             Expanded(
               child: SingleChildScrollView(
                 child: Container(
-                  height: MediaQuery.of(context).size.height / 1.5,
                   color: Color(ColorX.white),
-                  padding: EdgeInsets.symmetric(horizontal: 45),
+                  padding: EdgeInsets.only(left: 45, right: 45, top: 53),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
-                        height: 53,
-                      ),
-                      Text(
-                        'Email address',
-                        style: getTextStyle(),
-                      ),
-                      SizedBox(
-                        height: 13,
-                      ),
-                      TextFormField(
-                        onChanged: null,
-                        onTap: () {
-                          setState(() {
-                            test = true;
-                          });
-                        },
-                        keyboardType: TextInputType.emailAddress,
-                        decoration: getOutlineBorderDecoration(
-                          hintText: 'Enter Your Email',
-                          prefixicon: Icons.email_outlined,
-                          suffixicon: test ? Icons.alternate_email_sharp : null,
-                        ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Email address',
+                            style: getTextStyle(),
+                          ),
+                          SizedBox(
+                            height: 13,
+                          ),
+                          TextFormField(
+                            onChanged: null,
+                            onTap: () {
+                              setState(() {
+                                test = true;
+                              });
+                            },
+                            keyboardType: TextInputType.emailAddress,
+                            decoration: getOutlineBorderDecoration(
+                              hintText: 'Enter Your Email',
+                              prefixicon: Icons.email_outlined,
+                              suffixicon:
+                                  test ? Icons.alternate_email_sharp : null,
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(
                         height: 34,
                       ),
-                      Text(
-                        'Password',
-                        style: getTextStyle(),
-                      ),
-                      SizedBox(
-                        height: 13,
-                      ),
-                      TextFormField(
-                        onChanged: null,
-                        onTap: () {
-                          setState(() {
-                            test = false;
-                          });
-                        },
-                        keyboardType: TextInputType.text,
-                        decoration: getOutlineBorderDecoration(
-                            hintText: 'Enter Your Password',
-                            prefixicon: Icons.lock_outline),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Password',
+                            style: getTextStyle(),
+                          ),
+                          SizedBox(
+                            height: 13,
+                          ),
+                          TextFormField(
+                            onChanged: null,
+                            onTap: () {
+                              setState(() {
+                                test = false;
+                              });
+                            },
+                            keyboardType: TextInputType.text,
+                            decoration: getOutlineBorderDecoration(
+                                hintText: 'Enter Your Password',
+                                prefixicon: Icons.lock_outline),
+                          ),
+                        ],
                       ),
                       SizedBox(
                         height: 26,
@@ -170,7 +165,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ],
                       ),
                       SizedBox(
-                        height: 19,
+                        height: 18,
                       ),
                       SizedBox(
                         height: 56,
@@ -215,7 +210,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           )
                         ],
-                      )
+                      ),
+                      SizedBox(
+                        height: 48,
+                      ),
                     ],
                   ),
                 ),

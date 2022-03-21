@@ -62,6 +62,7 @@ class _PopularScreenState extends State<PopularScreen> {
             child: GridView.count(
               crossAxisCount: 2,
               mainAxisSpacing: 4,
+              crossAxisSpacing: 0.0,
               children: [
                 for (int i = 0; i < 16; i++)
                   GestureDetector(

@@ -30,16 +30,15 @@ class _FilterChipsState extends State<FilterChips> {
         label: SizedBox(
           width: MediaQuery.of(context).size.width / 15,
           height: MediaQuery.of(context).size.height / 20,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          child: Stack(
             children: [
-              SizedBox(
-                width: 5,
+              Center(
+                child: Text(
+                  widget.label!,
+                ),
               ),
-              Text(
-                widget.label!,
-              ),
-              Expanded(
+              Positioned(
+                left: 20,
                 child: Container(
                     padding: EdgeInsets.only(bottom: 32),
                     child: widget.selectedOne

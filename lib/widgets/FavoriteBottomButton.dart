@@ -41,27 +41,23 @@ class FavoriteBottomButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                width: 98,
-              ),
-              ButtonText(
-                iconData: preIcon,
-                label: label,
-                color: ColorX.white,
-              ),
-              SizedBox(
-                width: 70,
+              Expanded(
+                child: ButtonText(
+                  iconData: preIcon,
+                  label: label,
+                  color: ColorX.white,
+                ),
               ),
               Container(
-                  padding: EdgeInsets.symmetric(horizontal: 5, vertical: 2),
-                  color: check ? Color(ColorX.navyBlue) : Color(ColorX.primary),
+                  color: check ? Color(ColorX.navyBlue) : null,
                   child: check
                       ? Text(
                           '${price}',
                           style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w700,
-                              color: Color(ColorX.white)),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
+                            color: Color(ColorX.white),
+                          ),
                         )
                       : null),
             ],
