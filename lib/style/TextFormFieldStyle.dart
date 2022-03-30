@@ -12,6 +12,9 @@ InputDecoration getOutlineBorderDecoration({
 }) {
   return InputDecoration(
     hintText: hintText,
+    errorStyle: TextStyle(
+      color: Colors.red,
+    ),
     hintStyle: getHintStyle(),
     floatingLabelStyle: getTextStyle(),
     prefixIcon: prefixicon != null
@@ -30,6 +33,7 @@ InputDecoration getOutlineBorderDecoration({
     border: InputBorder.none,
     focusedBorder: OutlineInputBorder(
       borderSide: BorderSide(
+        width: 1.0,
         color: Color(ColorX.primary),
       ),
     ),

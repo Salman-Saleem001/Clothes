@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pearlclothes/services/auth.dart';
 import 'package:pearlclothes/style/GradientColor.dart';
 import 'package:pearlclothes/style/TextFieldHintStyle.dart';
 import 'package:pearlclothes/style/color.dart';
 import 'package:pearlclothes/widgets/DrawerItems.dart';
 
 Drawer getDrawer(context) {
+  final AuthServices _auth = AuthServices();
   List<String> lable = [
     'Order',
     'Wishlist',
@@ -133,6 +135,9 @@ Drawer getDrawer(context) {
                   label: 'Logout',
                   iconData: Icons.logout,
                 ),
+                onTap: () async {
+                  await _auth.logOut();
+                },
               ),
               SizedBox(
                 height: 30,

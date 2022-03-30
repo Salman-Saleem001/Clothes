@@ -14,7 +14,6 @@ class EntryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(ColorX.black),
         body: Container(
           decoration: getContainerDecoration(color: ColorX.black),
           child: Stack(

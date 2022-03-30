@@ -25,70 +25,71 @@ class _PopularItemsState extends State<PopularItems> {
   );
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Color(ColorX.white),
-        body: Column(
-          children: [
-            Expanded(
-              child: Container(
-                width: MediaQuery.of(context).size.width / 2.5,
-                padding: EdgeInsets.only(bottom: 10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  color: Color(ColorX.transparent),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(right: 20),
-                          child: IconButton(
-                            onPressed: () {
-                              setState(() {
-                                if (check == false) {
-                                  check = true;
-                                } else {
-                                  check = false;
-                                }
-                              });
-                            },
-                            icon: check ? newIcon : outlinedicon,
-                          ),
+    return Container(
+      margin: EdgeInsets.only(bottom: 10),
+      child: Column(
+        children: [
+          Expanded(
+            child: Container(
+              width: MediaQuery.of(context).size.width / 2.5,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: Color(ColorX.transparent),
+              ),
+              child: Stack(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(right: 10),
+                        child: IconButton(
+                          splashRadius: 1,
+                          onPressed: () {
+                            setState(() {
+                              if (check == false) {
+                                check = true;
+                              } else {
+                                check = false;
+                              }
+                            });
+                          },
+                          icon: check ? newIcon : outlinedicon,
                         ),
-                      ],
-                    ),
-                    Expanded(
+                      ),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20.0, bottom: 10),
+                    child: Center(
                       child: Image.asset(
                         widget.image,
                         fit: BoxFit.cover,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
-            SizedBox(
-              height: 18,
-            ),
-            Text(
-              widget.name,
-              style: TextStyle(
-                  fontWeight: FontWeight.w900,
-                  fontSize: 16,
-                  color: Color(ColorX.black)),
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            RichTextWidget(
-              amount: widget.amount,
-              color: ColorX.tagColor,
-            ),
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 18,
+          ),
+          Text(
+            widget.name,
+            style: TextStyle(
+                fontWeight: FontWeight.w900,
+                fontSize: 16,
+                color: Color(ColorX.black)),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          RichTextWidget(
+            amount: widget.amount,
+            color: ColorX.tagColor,
+          )
+        ],
       ),
     );
   }

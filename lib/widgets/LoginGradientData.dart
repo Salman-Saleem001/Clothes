@@ -12,9 +12,12 @@ class LoginGradientData extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Image.asset(
-              'asset/image/loginImage.png',
-              fit: BoxFit.contain,
+            Padding(
+              padding: const EdgeInsets.only(top: 45),
+              child: Image.asset(
+                'asset/image/loginImage.png',
+                fit: BoxFit.contain,
+              ),
             ),
           ],
         ),
